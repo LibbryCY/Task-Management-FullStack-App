@@ -1,0 +1,6 @@
+[submodule "fronted"]
+	path = fronted
+	url = https://github.com/LibbryCY/fronted.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/LibbryCY/backend.git
