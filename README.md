@@ -10,11 +10,11 @@ Task Management FullStack App is a web application for managing tasks that allow
 - **Registration and Login**: Users can create accounts and log in to access their tasks.
 
 ## Technologies
-- **Frontend**: React.js, HTML, CSS, JavaScript
+- **Frontend**: React.js, HTML, CSS, JavaScript, TypeScript
 - **Backend**: NestJS, TypeScript
 - **Database**: PostgreSQL
-- **Authentication**: JWT (JSON Web Tokens)
-- **Other Libraries and Tools**: Axios, Prime, React Router, Bootstrap
+- **Authentication**: JWT (JSON Web Tokens), bcrypt
+- **Other Libraries and Tools**: Axios, Prisma, Browser Router
 
 ## How to Run the Project
 
@@ -45,11 +45,9 @@ Task Management FullStack App is a web application for managing tasks that allow
 4. Configure PostgreSQL:
    - Create a `.env` file in the backend directory and add the following variables:
    ```env
-   DATABASE_HOST=your_database_host
-   DATABASE_PORT=your_database_port
-   DATABASE_USER=your_database_user
-   DATABASE_PASSWORD=your_database_password
-   DATABASE_NAME=your_database_name
+   PORT=server_port
+   DB_PASSWORD=your_database_password
+   DATABASE_URL=your_database_url
    JWT_SECRET=your_jwt_secret_key
    ```
 
@@ -71,13 +69,13 @@ Task Management FullStack App is a web application for managing tasks that allow
    ```
 
 8. Access the application:
-   - Open your browser and go to [http://localhost:3000](http://localhost:3000).
+   - Open your browser and go to [http://localhost:3000](http://localhost:3000)( default value for PORT is 3000).
 
 ## Project Structure
-- **backend**: NestJS application with modules, controllers, services, and entities.
+- **backend**: NestJS application with modules, controllers, services, and prisma models.
 - **frontend**: React application with components, routes, and services for backend communication.
 - **migrations**: SQL migrations for the PostgreSQL database.
-- **entities**: TypeORM entities for tasks and users.
+- **models**: Prisma models for categories, tasks and users.
 - **services**: Business logic for handling requests.
 - **controllers**: Controllers for handling HTTP requests.
 
